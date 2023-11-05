@@ -10,6 +10,7 @@ public class Tank : MonoBehaviour
     public KeyCode shootKey;
 
     public GameObject bullet;
+    public Transform shootPoint;
 
     void Update()
     {
@@ -21,7 +22,7 @@ public class Tank : MonoBehaviour
 
         if (Input.GetKeyDown(shootKey))
         {
-            Instantiate(bullet,transform.position,transform.rotation);
+            Instantiate(bullet,shootPoint.position,shootPoint.rotation);
         }
     }
 }
