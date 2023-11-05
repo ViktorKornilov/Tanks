@@ -7,6 +7,9 @@ public class Tank : MonoBehaviour
 
     public string verticalAxis;
     public string horizontalAxis;
+    public KeyCode shootKey;
+
+    public GameObject bullet;
 
     void Update()
     {
@@ -15,5 +18,10 @@ public class Tank : MonoBehaviour
 
         var hor = Input.GetAxis(horizontalAxis);
         transform.Rotate(0,rotateSpeed * hor * Time.deltaTime,0);
+
+        if (Input.GetKeyDown(shootKey))
+        {
+            Instantiate(bullet,transform.position,transform.rotation);
+        }
     }
 }
