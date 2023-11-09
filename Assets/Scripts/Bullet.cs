@@ -29,5 +29,6 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(gameObject);
+        //AudioSource.PlayOneShot(audioClip);
     }
 }
