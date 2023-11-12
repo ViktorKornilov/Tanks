@@ -116,6 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  autoDestroy: 0
+  particleCount: 0
+  particle: {fileID: 0}
 --- !u!1 &8111024811696602168
 GameObject:
   m_ObjectHideFlags: 0
