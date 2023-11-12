@@ -20,7 +20,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Boom")
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Health>().Damage();
+
             for (int i = 0; i < particleCount; i++)
             {
                 var offset = Random.insideUnitSphere;
